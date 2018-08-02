@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    android:foreground="@drawable/round_corner"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:elevation="4dp">
+
+
+    <FrameLayout
+        android:id="@+id/frame_for_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageSwitcher
+            android:id="@+id/image_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/stroy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+
+        <com.example.johnny.fragmentinrecycleview.StoryStatusView
+            android:id="@+id/storiesStatus"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:layout_below="@+id/discription"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/round_corner_border"
+        android:layout_marginTop="-2dp"
+        android:gravity="center"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Full Coverage"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
